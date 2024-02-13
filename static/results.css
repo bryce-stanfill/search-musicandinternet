@@ -1,0 +1,133 @@
+:root{
+    --background_color: #0A0A0F;
+    --buttons_background_color: #242222;
+    --buttons_highlight: #524C4C;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: var(--background_color); 
+    font-family:"Roboto", sans-serif;
+    color: whitesmoke;
+    overflow: auto;
+
+}
+
+.search{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.search > button{
+    background-color: var(--buttons_background_color);
+    border: groove var(--buttons_background_color) 4px;
+    margin-left: 30px;
+}
+
+.search > button:hover{
+    background-color: var(--buttons_highlight);
+}
+
+#search_bar{
+    width: 50%;
+    height: 50px;
+    border-radius: 16px;
+    background-color: #141418;
+    color:white;
+    font-weight: bold;
+    border: 2px solid #575557;
+    margin-left: 30px;
+}
+
+#search_bar:focus, #search_bar:hover{
+    outline: none;
+    background-color: #1D1B1F;
+}
+
+hr{
+    border: 1px solid white;
+}
+
+div.options{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.options button.active{
+    background-color: #3D0506;
+}
+
+.options button{
+    text-align: center;
+    text-decoration: underline;
+    height: 40px;
+    width: 100px;
+    margin-right: 5px;
+    color: whitesmoke;
+    border: 1px solid ghostwhite;
+    background-color: var(--background_color);
+}
+
+.options button:hover{
+    background-color: #3D0506;
+}
+
+
+nav.custom-paginator{
+    display: flex;
+    justify-content: center;
+}
+
+nav.custom-paginator button{
+    background-color: rgb(80, 72, 72);
+    border: 1px solid grey;
+    text-decoration: none;
+    color: #c9bebe;
+    padding: 10px 10px;
+}
+
+nav.custom-paginator button.activated{
+    background-color: #3D0506;
+}
+
+nav.custom-paginator button:hover{
+    background-color: #3D0506;
+}
+
+.searchResults{ 
+    display: flex;
+    flex-direction: column; 
+}
+
+.searchResults img{
+    max-width: 100%;
+    height: auto;
+    /* in case an image doesn't render */
+    text-align: center;
+}
+
+.searchResults a{
+    color: rgb(166, 117, 117);
+}
+
+.searchResults a:hover{
+    color: #900606;
+}
+
+table{
+    text-align: center;
+}
+
+
+
+

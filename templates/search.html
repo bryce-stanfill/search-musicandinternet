@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="search engine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&effect=outline">
+
+    <!-- Bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <!-- AngularJS Storage module -->
+    <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+
+    <!-- AngularJS Routing module -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+
+    <title> search engine </title>
+
+    <noscript> Javascript is disabled! Website will not function
+        properly! Enable it!
+    </noscript>
+
+    <link rel="stylesheet" href="../static/search.css" type="text/css">
+
+    <script src="../static/search.js"></script>
+</head>
+<body data-ng-app="app">
+
+    <div id="content_container" data-ng-controller="swap-controller">
+        <img src="../static/media/goggleAnim.gif" alt="goggle-text">
+        <div class="search">
+            <input type="text" data-ng-keypress="search($event)" 
+             data-ng-model="value" placeholder="Search" id="search_bar">
+            <button data-ng-click="search($event)"> 
+                <img src="../static/media/search.png" alt="search-icon">
+            </button>
+        </div>
+        
+        <!-- toggle button for web and local search (ng-bind needed due to flask and angularjs both using double curly braces) -->
+        <button data-ng-click="swap($event)" id="swap-button" data-ng-bind="message"></button>
+    </div>
+
+    <footer>
+        <p style="text-align: center; color: rgb(210, 207, 203);"> Note: Made with Google and Bing Custom Search API </p>
+    </footer>
+</body>
+</html>

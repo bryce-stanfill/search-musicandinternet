@@ -1,0 +1,100 @@
+:root{
+    --background_color: #0A0A0F;
+    --buttons_background_color: #242222;
+    --buttons_highlight: #524C4C;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: var(--background_color); 
+    font-family:"Roboto", sans-serif;
+    overflow: auto;
+
+}
+
+#content_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 2rem;
+}
+
+@media screen and (max-width: 400px){
+    #content_container img{
+        width: 75%;
+        height: 75%;
+    }
+    #search{
+        width: 75%;
+    }
+}
+
+@media screen and (max-height: 550px){
+    #content_container img{
+        width: 75%;
+        height: 75%;
+    }
+    footer{
+        padding-top: 0;
+    }
+}
+
+
+#content_container > img{
+    margin-top: 100px;
+}
+
+
+.search{
+    display: flex;
+    column-gap: 1.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.search > button{
+    background-color: var(--buttons_background_color);
+    border: groove var(--buttons_background_color) 4px;
+}
+
+.search > button:hover{
+    background-color: var(--buttons_highlight);
+}
+
+#content_container > button{
+    background-color: var(--buttons_background_color);
+    border: groove var(--buttons_background_color) 4px;
+    color: bisque;
+    text-align: center;
+    width: 200px;
+
+}
+
+#content_container > button:hover{
+    background-color: var(--buttons_highlight);
+}
+
+#search_bar{
+    width: 50%;
+    border-radius: 16px;
+    background-color: #141418;
+    color:white;
+    font-weight: bold;
+    border: 2px solid #575557;
+}
+
+#search_bar:focus, #search_bar:hover{
+    outline: none;
+    background-color: #1D1B1F;
+}
+
+footer p{
+    margin-top: 15px;
+}
